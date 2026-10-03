@@ -12,6 +12,8 @@ class BenchmarkRequest(BaseModel):
 class RegressionRequest(BaseModel):
     baseline_experiment_id: str
     current_experiment_id: str
+
+
 class ConcurrencyRequest(BaseModel):
     model: str
     limit: int = Field(
@@ -21,4 +23,19 @@ class ConcurrencyRequest(BaseModel):
     concurrency: int = Field(
         default=2,
         description="Maximum number of concurrent requests.",
+    )
+
+
+class LeaderboardRequest(BaseModel):
+    sort_by: str = Field(
+        default="accuracy",
+        description="Metric used to sort the leaderboard.",
+    )
+    descending: bool = Field(
+        default=True,
+        description="Whether to sort in descending order.",
+    )
+    latest_only: bool = Field(
+        default=False,
+        description="Show only the latest experiment for each model.",
     )

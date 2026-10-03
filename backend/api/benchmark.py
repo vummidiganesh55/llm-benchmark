@@ -490,15 +490,11 @@ def get_experiment_report(
                 ),
             )
 
-        generator = ExperimentReportGenerator()
+        generator = ExperimentReportGenerator(experiment)
 
-        report = generator.generate(
-            experiment
-        )
+        report = generator.generate_report()
 
-        text_report = generator.generate_text(
-            report
-        )
+        text_report = generator.generate_text_report()
 
         return {
             "status": "success",

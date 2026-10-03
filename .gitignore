@@ -85,3 +85,6 @@ dist/
 
 # Local live API test scripts
 backend/test_openai_live.py
+
+# Generated screenshots and report outputs
+outputs/

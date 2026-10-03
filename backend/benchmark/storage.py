@@ -8,6 +8,31 @@ RESULTS_FILE = "results/benchmark_results.json"
 
 
 class BenchmarkStorage:
+    @classmethod
+    def get_all(cls):
+        """
+        Return all stored benchmark experiments.
+        """
+        if not os.path.exists(RESULTS_FILE):
+            return []
+
+        with open(
+            RESULTS_FILE,
+            "r",
+            encoding="utf-8",
+        ) as file:
+            data = json.load(file)
+
+        if isinstance(data, list):
+            return data
+
+        if isinstance(data, dict):
+            experiments = data.get("experiments", [])
+
+            if isinstance(experiments, list):
+                return experiments
+
+        return []
 
     @staticmethod
     def save(
