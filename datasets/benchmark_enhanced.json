@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "category": "math",
+    "prompt": "What is 15 multiplied by 7?",
+    "expected": "105",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "multiplication"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "math",
+    "prompt": "What is 144 divided by 12?",
+    "expected": "12",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "division"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "math",
+    "prompt": "What is 25 plus 37?",
+    "expected": "62",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "addition"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "math",
+    "prompt": "What is 100 minus 45?",
+    "expected": "55",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "subtraction"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "math",
+    "prompt": "What is 9 multiplied by 8?",
+    "expected": "72",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "multiplication"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "math",
+    "prompt": "What is 225 divided by 15?",
+    "expected": "15",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "division"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "math",
+    "prompt": "What is 17 plus 28?",
+    "expected": "45",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "addition"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "math",
+    "prompt": "What is 90 minus 37?",
+    "expected": "53",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "subtraction"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "math",
+    "prompt": "What is 12 multiplied by 12?",
+    "expected": "144",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "multiplication"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "math",
+    "prompt": "What is 81 divided by 9?",
+    "expected": "9",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "math",
+      "division"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "knowledge",
+    "prompt": "What is the capital of France?",
+    "expected": "Paris",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "geography"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "knowledge",
+    "prompt": "Which planet is known as the Red Planet?",
+    "expected": "Mars",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "astronomy"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "knowledge",
+    "prompt": "How many continents are there on Earth?",
+    "expected": "7",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "geography"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "knowledge",
+    "prompt": "What is the largest ocean on Earth?",
+    "expected": "Pacific",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "geography"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "knowledge",
+    "prompt": "What is the largest planet in our solar system?",
+    "expected": "Jupiter",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "astronomy"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "knowledge",
+    "prompt": "What is the chemical symbol for water?",
+    "expected": "H2O",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "chemistry"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "knowledge",
+    "prompt": "The Great Wall is located in which country?",
+    "expected": "China",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "geography"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "knowledge",
+    "prompt": "How many days are there in a leap year?",
+    "expected": "366",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "calendar"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "knowledge",
+    "prompt": "Which gas do humans need to breathe?",
+    "expected": "oxygen",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "biology"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "knowledge",
+    "prompt": "What is the boiling point of water in degrees Celsius at standard atmospheric pressure?",
+    "expected": "100",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "knowledge",
+      "physics"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "reasoning",
+    "prompt": "An eagle is a bird. Does an eagle have wings?",
+    "expected": "Yes",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "logical_reasoning"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "reasoning",
+    "prompt": "John is taller than Mike. Mike is taller than David. Who is the shortest?",
+    "expected": "David",
+    "difficulty": "medium",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "comparison"
+    ]
+  },
+  {
+    "id": 23,
+    "category": "reasoning",
+    "prompt": "If today is Monday, what day will it be two days from now?",
+    "expected": "Wednesday",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "temporal_reasoning"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "reasoning",
+    "prompt": "There are 3 red balls and 2 blue balls. How many balls are there in total?",
+    "expected": "5",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "counting"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "reasoning",
+    "prompt": "A is greater than B, and B is greater than C. Which is the smallest?",
+    "expected": "C",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "comparison"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "reasoning",
+    "prompt": "A train leaves at 10 AM and arrives at 1 PM. How long is the journey?",
+    "expected": "3 hours",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "time_calculation"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "reasoning",
+    "prompt": "If 5 apples are equally distributed among 5 people, how many apples does each person receive?",
+    "expected": "1",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "counting"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "reasoning",
+    "prompt": "If yesterday was Friday, what day is today?",
+    "expected": "Saturday",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "temporal_reasoning"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "reasoning",
+    "prompt": "A square has four corners. If one chair is placed at each corner, how many chairs are needed?",
+    "expected": "4",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "counting"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "reasoning",
+    "prompt": "Two cats catch two mice in two minutes. How many mice can four cats catch in two minutes, assuming the same rate?",
+    "expected": "4",
+    "difficulty": "medium",
+    "evaluation_type": "exact",
+    "tags": [
+      "reasoning",
+      "rate_reasoning"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "coding",
+    "prompt": "Which Python keyword is used to define a function?",
+    "expected": "def",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "functions"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "coding",
+    "prompt": "What keyword is used to define a function in Python?",
+    "expected": "def",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "functions"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "coding",
+    "prompt": "Which Python data type stores key-value pairs?",
+    "expected": "dictionary",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "data_structures"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "coding",
+    "prompt": "What symbol is used to create a single-line comment in Python?",
+    "expected": "#",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "syntax"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "coding",
+    "prompt": "Which Python keyword is commonly used to iterate over a sequence?",
+    "expected": "for",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "iteration"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "coding",
+    "prompt": "Which Python data structure represents an ordered collection of elements?",
+    "expected": "list",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "data_structures"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "coding",
+    "prompt": "Which Python keyword starts an exception-handling block?",
+    "expected": "try",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "exception_handling"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "coding",
+    "prompt": "Which Python function returns the number of elements in a list?",
+    "expected": "len",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "built_in_functions"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "coding",
+    "prompt": "Which Python operator is used for exponentiation?",
+    "expected": "**",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "operators"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "coding",
+    "prompt": "Which Python keyword sends a value back from a function?",
+    "expected": "return",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "coding",
+      "functions"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "general",
+    "prompt": "What does ML stand for in artificial intelligence?",
+    "expected": "machine learning",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "general",
+    "prompt": "What does CPU stand for?",
+    "expected": "central processing unit",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "general",
+    "prompt": "What does API stand for?",
+    "expected": "application programming interface",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "general",
+    "prompt": "What does HTTP stand for?",
+    "expected": "hypertext transfer protocol",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "general",
+    "prompt": "What does RAM stand for?",
+    "expected": "random access memory",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "general",
+    "prompt": "What does SQL stand for?",
+    "expected": "structured query language",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "general",
+    "prompt": "What does GPU stand for?",
+    "expected": "graphics processing unit",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "general",
+    "prompt": "What is the software that manages computer hardware and applications called?",
+    "expected": "operating system",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "operating_system"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "general",
+    "prompt": "What does AI stand for?",
+    "expected": "artificial intelligence",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "general",
+    "prompt": "What does LLM stand for?",
+    "expected": "large language model",
+    "difficulty": "easy",
+    "evaluation_type": "exact",
+    "tags": [
+      "general",
+      "acronym"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+streamlit
+requests
+pandas
+pydantic
+python-dotenv
+pytest
+httpx
+openai
+anthropic
+google-genai
+mistralai

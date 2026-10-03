@@ -1,0 +1,306 @@
+[
+  {
+    "id": 1,
+    "category": "math",
+    "prompt": "What is 15 multiplied by 7?",
+    "expected": "105"
+  },
+  {
+    "id": 2,
+    "category": "math",
+    "prompt": "What is 144 divided by 12?",
+    "expected": "12"
+  },
+  {
+    "id": 3,
+    "category": "math",
+    "prompt": "What is 25 plus 37?",
+    "expected": "62"
+  },
+  {
+    "id": 4,
+    "category": "math",
+    "prompt": "What is 100 minus 45?",
+    "expected": "55"
+  },
+  {
+    "id": 5,
+    "category": "math",
+    "prompt": "What is 9 multiplied by 8?",
+    "expected": "72"
+  },
+  {
+    "id": 6,
+    "category": "math",
+    "prompt": "What is 225 divided by 15?",
+    "expected": "15"
+  },
+  {
+    "id": 7,
+    "category": "math",
+    "prompt": "What is 17 plus 28?",
+    "expected": "45"
+  },
+  {
+    "id": 8,
+    "category": "math",
+    "prompt": "What is 90 minus 37?",
+    "expected": "53"
+  },
+  {
+    "id": 9,
+    "category": "math",
+    "prompt": "What is 12 multiplied by 12?",
+    "expected": "144"
+  },
+  {
+    "id": 10,
+    "category": "math",
+    "prompt": "What is 81 divided by 9?",
+    "expected": "9"
+  },
+
+  {
+    "id": 11,
+    "category": "knowledge",
+    "prompt": "What is the capital of France?",
+    "expected": "Paris"
+  },
+  {
+    "id": 12,
+    "category": "knowledge",
+    "prompt": "Which planet is known as the Red Planet?",
+    "expected": "Mars"
+  },
+  {
+    "id": 13,
+    "category": "knowledge",
+    "prompt": "How many continents are there on Earth?",
+    "expected": "7"
+  },
+  {
+    "id": 14,
+    "category": "knowledge",
+    "prompt": "What is the largest ocean on Earth?",
+    "expected": "Pacific"
+  },
+  {
+    "id": 15,
+    "category": "knowledge",
+    "prompt": "What is the largest planet in our solar system?",
+    "expected": "Jupiter"
+  },
+  {
+    "id": 16,
+    "category": "knowledge",
+    "prompt": "What is the chemical symbol for water?",
+    "expected": "H2O"
+  },
+  {
+    "id": 17,
+    "category": "knowledge",
+    "prompt": "The Great Wall is located in which country?",
+    "expected": "China"
+  },
+  {
+    "id": 18,
+    "category": "knowledge",
+    "prompt": "How many days are there in a leap year?",
+    "expected": "366"
+  },
+  {
+    "id": 19,
+    "category": "knowledge",
+    "prompt": "Which gas do humans need to breathe?",
+    "expected": "oxygen"
+  },
+  {
+    "id": 20,
+    "category": "knowledge",
+    "prompt": "What is the boiling point of water in degrees Celsius at standard atmospheric pressure?",
+    "expected": "100"
+  },
+
+  {
+    "id": 21,
+    "category": "reasoning",
+    "prompt": "An eagle is a bird. Does an eagle have wings?",
+    "expected": "Yes"
+  },
+  {
+    "id": 22,
+    "category": "reasoning",
+    "prompt": "John is taller than Mike. Mike is taller than David. Who is the shortest?",
+    "expected": "David"
+  },
+  {
+    "id": 23,
+    "category": "reasoning",
+    "prompt": "If today is Monday, what day will it be two days from now?",
+    "expected": "Wednesday"
+  },
+  {
+    "id": 24,
+    "category": "reasoning",
+    "prompt": "There are 3 red balls and 2 blue balls. How many balls are there in total?",
+    "expected": "5"
+  },
+  {
+    "id": 25,
+    "category": "reasoning",
+    "prompt": "A is greater than B, and B is greater than C. Which is the smallest?",
+    "expected": "C"
+  },
+  {
+    "id": 26,
+    "category": "reasoning",
+    "prompt": "A train leaves at 10 AM and arrives at 1 PM. How long is the journey?",
+    "expected": "3 hours"
+  },
+  {
+    "id": 27,
+    "category": "reasoning",
+    "prompt": "If 5 apples are equally distributed among 5 people, how many apples does each person receive?",
+    "expected": "1"
+  },
+  {
+    "id": 28,
+    "category": "reasoning",
+    "prompt": "If yesterday was Friday, what day is today?",
+    "expected": "Saturday"
+  },
+  {
+    "id": 29,
+    "category": "reasoning",
+    "prompt": "A square has four corners. If one chair is placed at each corner, how many chairs are needed?",
+    "expected": "4"
+  },
+  {
+    "id": 30,
+    "category": "reasoning",
+    "prompt": "Two cats catch two mice in two minutes. How many mice can four cats catch in two minutes, assuming the same rate?",
+    "expected": "4"
+  },
+
+  {
+    "id": 31,
+    "category": "coding",
+    "prompt": "Which Python keyword is used to define a function?",
+    "expected": "def"
+  },
+  {
+    "id": 32,
+    "category": "coding",
+    "prompt": "What keyword is used to define a function in Python?",
+    "expected": "def"
+  },
+  {
+    "id": 33,
+    "category": "coding",
+    "prompt": "Which Python data type stores key-value pairs?",
+    "expected": "dictionary"
+  },
+  {
+    "id": 34,
+    "category": "coding",
+    "prompt": "What symbol is used to create a single-line comment in Python?",
+    "expected": "#"
+  },
+  {
+    "id": 35,
+    "category": "coding",
+    "prompt": "Which Python keyword is commonly used to iterate over a sequence?",
+    "expected": "for"
+  },
+  {
+    "id": 36,
+    "category": "coding",
+    "prompt": "Which Python data structure represents an ordered collection of elements?",
+    "expected": "list"
+  },
+  {
+    "id": 37,
+    "category": "coding",
+    "prompt": "Which Python keyword starts an exception-handling block?",
+    "expected": "try"
+  },
+  {
+    "id": 38,
+    "category": "coding",
+    "prompt": "Which Python function returns the number of elements in a list?",
+    "expected": "len"
+  },
+  {
+    "id": 39,
+    "category": "coding",
+    "prompt": "Which Python operator is used for exponentiation?",
+    "expected": "**"
+  },
+  {
+    "id": 40,
+    "category": "coding",
+    "prompt": "Which Python keyword sends a value back from a function?",
+    "expected": "return"
+  },
+
+  {
+    "id": 41,
+    "category": "general",
+    "prompt": "What does ML stand for in artificial intelligence?",
+    "expected": "machine learning"
+  },
+  {
+    "id": 42,
+    "category": "general",
+    "prompt": "What does CPU stand for?",
+    "expected": "central processing unit"
+  },
+  {
+    "id": 43,
+    "category": "general",
+    "prompt": "What does API stand for?",
+    "expected": "application programming interface"
+  },
+  {
+    "id": 44,
+    "category": "general",
+    "prompt": "What does HTTP stand for?",
+    "expected": "hypertext transfer protocol"
+  },
+  {
+    "id": 45,
+    "category": "general",
+    "prompt": "What does RAM stand for?",
+    "expected": "random access memory"
+  },
+  {
+    "id": 46,
+    "category": "general",
+    "prompt": "What does SQL stand for?",
+    "expected": "structured query language"
+  },
+  {
+    "id": 47,
+    "category": "general",
+    "prompt": "What does GPU stand for?",
+    "expected": "graphics processing unit"
+  },
+  {
+    "id": 48,
+    "category": "general",
+    "prompt": "What is the software that manages computer hardware and applications called?",
+    "expected": "operating system"
+  },
+  {
+    "id": 49,
+    "category": "general",
+    "prompt": "What does AI stand for?",
+    "expected": "artificial intelligence"
+  },
+  {
+    "id": 50,
+    "category": "general",
+    "prompt": "What does LLM stand for?",
+    "expected": "large language model"
+  }
+]

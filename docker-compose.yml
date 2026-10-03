@@ -1,0 +1,40 @@
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llm-benchmark-backend
+    ports:
+      - "8000:8000"
+    environment:
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+    volumes:
+      - ./results:/app/results
+      - ./logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llm-benchmark-frontend
+    command: >
+      streamlit run frontend/streamlit_app.py
+      --server.address=0.0.0.0
+      --server.port=8501
+    ports:
+      - "8501:8501"
+    environment:
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+      API_BASE_URL: http://backend:8000
+    volumes:
+      - ./results:/app/results
+      - ./logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - backend
+    restart: unless-stopped

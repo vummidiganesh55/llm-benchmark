@@ -1,0 +1,14 @@
+{
+    "name": "LLM Benchmark Dataset",
+    "version": "1.0.0",
+    "description": "Multi-category benchmark dataset for evaluating LLM quality and performance.",
+    "file": "benchmark.json",
+    "question_count": 50,
+    "categories": {
+        "math": 10,
+        "knowledge": 10,
+        "reasoning": 10,
+        "coding": 10,
+        "general": 10
+    }
+}
