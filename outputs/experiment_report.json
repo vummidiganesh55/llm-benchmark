@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "report": {
+    "report_type": "LLM Benchmark Experiment Report",
+    "experiment": {
+      "experiment_id": "20261002_104930_973428",
+      "model": "gemini-3.6-flash",
+      "timestamp": "2026-10-02T10:49:30.973454+00:00",
+      "dataset": null
+    },
+    "summary": {
+      "experiment_id": "20261002_104930_973428",
+      "model": "gemini-3.6-flash",
+      "total_questions": 0,
+      "successful_questions": 0,
+      "failed_questions": 0,
+      "accuracy": 1,
+      "error_rate": 0.88
+    },
+    "quality": {
+      "accuracy": 1,
+      "exact_match": 0,
+      "fuzzy_match": 0,
+      "average_fuzzy_similarity": 0,
+      "semantic_match": 0,
+      "average_semantic_similarity": 0
+    },
+    "reliability": {
+      "error_rate": 0.88,
+      "retry_rate": 0,
+      "fallback_rate": 0,
+      "fallback_success_rate": 0
+    },
+    "performance": {
+      "average_latency": 6.1728,
+      "p50_latency": 6.0694,
+      "p95_latency": 6.8385,
+      "tokens_per_second": 1.92
+    },
+    "cost": {
+      "input_cost_usd": 0,
+      "output_cost_usd": 0,
+      "total_cost_usd": 0,
+      "cost_per_question_usd": 0
+    },
+    "categories": {
+      "math": {
+        "total": 0,
+        "successful": 0,
+        "failed": 0,
+        "correct": 6,
+        "accuracy": 1
+      },
+      "knowledge": {
+        "total": 0,
+        "successful": 0,
+        "failed": 0,
+        "correct": 0,
+        "accuracy": 0
+      },
+      "reasoning": {
+        "total": 0,
+        "successful": 0,
+        "failed": 0,
+        "correct": 0,
+        "accuracy": 0
+      },
+      "coding": {
+        "total": 0,
+        "successful": 0,
+        "failed": 0,
+        "correct": 0,
+        "accuracy": 0
+      },
+      "general": {
+        "total": 0,
+        "successful": 0,
+        "failed": 0,
+        "correct": 0,
+        "accuracy": 0
+      }
+    }
+  },
+  "text_report": "============================================================\nLLM BENCHMARK EXPERIMENT REPORT\n============================================================\n\nEXPERIMENT\n------------------------------------------------------------\nExperiment ID : 20261002_104930_973428\nModel         : gemini-3.6-flash\n\nSUMMARY\n------------------------------------------------------------\nTotal Questions      : 0.0\nSuccessful Questions : 0.0\nFailed Questions     : 0.0\nAccuracy             : 100.00%\nError Rate           : 88.00%\n\nQUALITY\n------------------------------------------------------------\nAccuracy                  : 100.00%\nExact Match               : 0.00%\nFuzzy Match               : 0.00%\nAvg Fuzzy Similarity     : 0.0000\nSemantic Match            : 0.00%\nAvg Semantic Similarity  : 0.0000\n\nRELIABILITY\n------------------------------------------------------------\nError Rate               : 88.00%\nRetry Rate               : 0.00%\nFallback Rate            : 0.00%\nFallback Success Rate    : 0.00%\n\nPERFORMANCE\n------------------------------------------------------------\nAverage Latency          : 6.1728 s\nP50 Latency              : 6.0694 s\nP95 Latency              : 6.8385 s\nTokens / Second          : 1.9200\n\nCOST\n------------------------------------------------------------\nInput Cost               : $0.000000\nOutput Cost              : $0.000000\nTotal Cost               : $0.000000\nCost / Question         : $0.000000\n\nCATEGORY PERFORMANCE\n------------------------------------------------------------\nMATH\n  Total      : 0.0\n  Successful : 0.0\n  Failed     : 0.0\n  Correct    : 6.0\n  Accuracy   : 100.00%\n\nKNOWLEDGE\n  Total      : 0.0\n  Successful : 0.0\n  Failed     : 0.0\n  Correct    : 0.0\n  Accuracy   : 0.00%\n\nREASONING\n  Total      : 0.0\n  Successful : 0.0\n  Failed     : 0.0\n  Correct    : 0.0\n  Accuracy   : 0.00%\n\nCODING\n  Total      : 0.0\n  Successful : 0.0\n  Failed     : 0.0\n  Correct    : 0.0\n  Accuracy   : 0.00%\n\nGENERAL\n  Total      : 0.0\n  Successful : 0.0\n  Failed     : 0.0\n  Correct    : 0.0\n  Accuracy   : 0.00%\n\n============================================================"
+}

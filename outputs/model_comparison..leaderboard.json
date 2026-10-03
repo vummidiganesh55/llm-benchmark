@@ -1,0 +1,106 @@
+{
+  "status": "success",
+  "sort_by": "accuracy",
+  "descending": true,
+  "latest_only": true,
+  "summary": {
+    "experiment_count": 30,
+    "model_count": 6,
+    "models": [
+      "gemini-3.6-flash",
+      "llama3.2:latest",
+      "mistral:latest",
+      "openai/gpt-oss-20b",
+      "qwen2.5-coder:3b",
+      "qwen2.5:3b"
+    ],
+    "available_metrics": [
+      "accuracy",
+      "average_latency",
+      "p95_latency",
+      "tokens_per_second",
+      "total_cost_usd",
+      "error_rate"
+    ]
+  },
+  "leaderboard": [
+    {
+      "experiment_id": "20261002_172627_064433",
+      "model": "qwen2.5:3b",
+      "timestamp": "2026-10-02T17:26:27.064433+00:00",
+      "accuracy": 1,
+      "average_latency": 0.5589,
+      "p95_latency": 0.5752,
+      "tokens_per_second": 95.7288,
+      "total_cost_usd": 0,
+      "error_rate": 0,
+      "total_questions": 2,
+      "successful_questions": 2
+    },
+    {
+      "experiment_id": "20261002_104930_973428",
+      "model": "gemini-3.6-flash",
+      "timestamp": "2026-10-02T10:49:30.973454+00:00",
+      "accuracy": 1,
+      "average_latency": 6.1728,
+      "p95_latency": 6.8385,
+      "tokens_per_second": 1.92,
+      "total_cost_usd": 0,
+      "error_rate": 0.88,
+      "total_questions": 0,
+      "successful_questions": 0
+    },
+    {
+      "experiment_id": "20261002_093236_919920",
+      "model": "llama3.2:latest",
+      "timestamp": "2026-10-02T09:32:36.919940+00:00",
+      "accuracy": 0.96,
+      "average_latency": 7.6292,
+      "p95_latency": 9.668,
+      "tokens_per_second": 3.9,
+      "total_cost_usd": 0,
+      "error_rate": 0,
+      "total_questions": 0,
+      "successful_questions": 0
+    },
+    {
+      "experiment_id": "20261002_092038_216169",
+      "model": "openai/gpt-oss-20b",
+      "timestamp": "2026-10-02T09:20:38.216191+00:00",
+      "accuracy": 0.94,
+      "average_latency": 4.8626,
+      "p95_latency": 5.1426,
+      "tokens_per_second": 21.7,
+      "total_cost_usd": 0,
+      "error_rate": 0,
+      "total_questions": 0,
+      "successful_questions": 0
+    },
+    {
+      "experiment_id": "20261002_094223_438750",
+      "model": "qwen2.5-coder:3b",
+      "timestamp": "2026-10-02T09:42:23.438771+00:00",
+      "accuracy": 0.94,
+      "average_latency": 7.6047,
+      "p95_latency": 10.71,
+      "tokens_per_second": 5.38,
+      "total_cost_usd": 0,
+      "error_rate": 0,
+      "total_questions": 0,
+      "successful_questions": 0
+    },
+    {
+      "experiment_id": "20261002_104711_805584",
+      "model": "mistral:latest",
+      "timestamp": "2026-10-02T10:47:11.805610+00:00",
+      "accuracy": 0.94,
+      "average_latency": 20.5379,
+      "p95_latency": 34.5545,
+      "tokens_per_second": 3.7,
+      "total_cost_usd": 0,
+      "error_rate": 0,
+      "total_questions": 0,
+      "successful_questions": 0
+    }
+  ]
+}

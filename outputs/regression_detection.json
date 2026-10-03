@@ -1,0 +1,67 @@
+{
+  "status": "success",
+  "regression": {
+    "baseline_experiment_id": "20261002_172627_064433",
+    "current_experiment_id": "20261002_172534_051571",
+    "baseline_model": "qwen2.5:3b",
+    "current_model": "qwen2.5:3b",
+    "checks": {
+      "accuracy": {
+        "metric": "accuracy",
+        "baseline": 1,
+        "current": 1,
+        "absolute_change": 0,
+        "relative_change": 0,
+        "threshold": 0.05,
+        "regression": false,
+        "direction": "decrease"
+      },
+      "average_latency": {
+        "metric": "average_latency",
+        "baseline": 0.5589,
+        "current": 2.2883,
+        "absolute_change": 1.7294,
+        "relative_change": 3.0942923599928434,
+        "threshold": 0.2,
+        "regression": true,
+        "direction": "increase"
+      },
+      "error_rate": {
+        "metric": "error_rate",
+        "baseline": 0,
+        "current": 0,
+        "absolute_change": 0,
+        "relative_change": 0,
+        "threshold": 0.05,
+        "regression": false,
+        "direction": "increase"
+      },
+      "tokens_per_second": {
+        "metric": "tokens_per_second",
+        "baseline": 95.7288,
+        "current": 23.38,
+        "absolute_change": -72.34880000000001,
+        "relative_change": -0.7557683790040197,
+        "threshold": 0.2,
+        "regression": true,
+        "direction": "decrease"
+      },
+      "total_cost_usd": {
+        "metric": "total_cost_usd",
+        "baseline": 0,
+        "current": 0,
+        "absolute_change": 0,
+        "relative_change": 0,
+        "threshold": 0.2,
+        "regression": false,
+        "direction": "increase"
+      }
+    },
+    "regressions_detected": 2,
+    "regressed_metrics": [
+      "average_latency",
+      "tokens_per_second"
+    ],
+    "has_regression": true
+  }
+}
