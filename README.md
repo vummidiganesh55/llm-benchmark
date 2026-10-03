@@ -1,403 +1,335 @@
-LLM Benchmarking Platform
+# 🚀 LLM Benchmarking Platform
 
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-009688)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)
+![Pytest](https://img.shields.io/badge/Tests-243%20Passed-brightgreen)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF)
+![License](https://img.shields.io/badge/License-MIT-green)
 
+A production-oriented **LLM evaluation and benchmarking platform** for measuring, comparing, and analyzing Large Language Models across **quality, latency, throughput, reliability, cost, semantic similarity, failure behavior, and regression performance**.
 
+The platform supports multiple LLM providers, reproducible benchmark experiments, automated evaluation, statistical analysis, regression detection, experiment reports, concurrency testing, model leaderboard generation, and an interactive Streamlit dashboard.
 
+---
 
+# 📌 Description
 
+The **LLM Benchmarking Platform** is designed to answer a practical question:
 
+> **How can different LLMs be evaluated consistently using measurable and reproducible metrics?**
 
-A production-oriented platform for benchmarking, evaluating, comparing, and monitoring Large Language Models across quality, latency, throughput, reliability, cost, semantic similarity, and failure behavior.
+Instead of evaluating an LLM only by manually looking at responses, this platform executes a standardized benchmark dataset and records quantitative measurements for every experiment.
 
-📌 Description
+The system provides:
 
-LLM Benchmarking Platform is an experiment-driven evaluation system for comparing multiple LLM providers and local models using a consistent benchmark dataset and reproducible evaluation pipeline.
+- Multi-model benchmarking
+- Multi-provider architecture
+- Automated answer evaluation
+- Latency measurement
+- Token throughput measurement
+- Reliability analysis
+- Retry and fallback mechanisms
+- Cost analysis
+- Embedding caching
+- Statistical analysis
+- Regression detection
+- Experiment tracking
+- Evaluation harness
+- Experiment reports
+- JSON / CSV / HTML report export
+- Model leaderboard
+- Concurrency benchmarking
+- Streamlit dashboard
+- FastAPI REST API
+- Docker support
+- Automated testing
+- GitHub Actions CI
 
-The platform combines:
+---
 
-Benchmark execution
+# 🎯 Problem Statement
 
-Multiple LLM provider adapters
+LLM applications are often evaluated using informal testing or a small number of manually selected examples.
 
-Exact and fuzzy evaluation
+This creates several problems:
 
-Semantic evaluation
+- Model quality is difficult to compare consistently.
+- Latency can vary significantly between models.
+- Token throughput is often ignored.
+- API failures and rate limits are not systematically measured.
+- Regression between model versions can go unnoticed.
+- Cost is difficult to compare across providers.
+- Benchmark results may not be reproducible.
+- There is often no centralized experiment history.
+- Manual evaluation does not scale.
 
-LLM-as-a-Judge support
+The goal of this project is to build an **experiment-driven LLM benchmarking system** that converts LLM evaluation into measurable engineering data.
 
-Retry and fallback handling
+---
 
-Failure analysis
+# 💡 Solution
 
-Statistical analysis
+The platform uses a standardized benchmark dataset and executes experiments through a common provider interface.
 
-Regression detection
+Each benchmark records:
 
-Quality × latency × cost analysis
+- Input question
+- Expected answer
+- Model response
+- Evaluation result
+- Latency
+- Provider latency
+- Token usage
+- Retry information
+- Fallback information
+- Error information
+- Category-level performance
 
-Experiment tracking
+The collected results are then processed by evaluation, statistics, reliability, cost, regression, reporting, and leaderboard components.
 
-Concurrency benchmarking
+---
 
-JSON / CSV / HTML report export
+# 🚀 Features
 
-Model leaderboard
+## 🔹 Core Benchmarking
 
-FastAPI backend
+- 50-question benchmark dataset
+- Multiple benchmark categories
+- Model/provider abstraction
+- Configurable benchmark execution
+- Per-question result tracking
+- Experiment IDs
+- Persistent experiment storage
 
-Streamlit dashboard
+## 🔹 Evaluation
 
-Docker
+- Exact-match evaluation
+- Fuzzy-match evaluation
+- Keyword evaluation
+- Semantic similarity evaluation
+- LLM-as-a-Judge support
+- Category-level evaluation
+- Quality metrics
 
-Automated pytest CI with GitHub Actions
+## 🔹 Performance Analysis
 
-The project is designed to demonstrate LLM engineering, evaluation engineering, backend engineering, observability, testing, and production-oriented system design.
+- Average latency
+- P50 latency
+- P95 latency
+- Provider latency
+- Tokens per second
+- Token efficiency
+- Throughput analysis
 
-🎯 Problem Statement
+## 🔹 Reliability
 
-LLM applications cannot be evaluated reliably using accuracy alone.
+- Error rate
+- Retry tracking
+- Retry rate
+- Fallback support
+- Fallback success rate
+- Failure analysis
+- Provider failure tracking
 
-Different models can have different:
+## 🔹 Cost Analysis
 
-Accuracy
+- Input token cost
+- Output token cost
+- Total cost
+- Cost per question
+- Quality × Latency × Cost analysis
 
-Response latency
+## 🔹 Experiment Management
 
-P50/P95 latency
+- Dataset versioning
+- Reproducible experiment configuration
+- Experiment tracking
+- Experiment reports
+- JSON reports
+- CSV reports
+- HTML reports
 
-Token throughput
+## 🔹 Model Comparison
 
-Error rates
+- Model comparison engine
+- Model leaderboard
+- Latest experiment comparison
+- Sortable benchmark metrics
+- Accuracy comparison
+- Latency comparison
+- Throughput comparison
+- Cost comparison
+- Error-rate comparison
 
-Retry behavior
+## 🔹 Advanced Evaluation
 
-Fallback behavior
+- Regression detection
+- Evaluation harness
+- Statistical analysis
+- Concurrency benchmarking
+- Embedding cache
+- Dataset enhancement
 
-Cost
+## 🔹 Developer Experience
 
-Semantic similarity
+- FastAPI backend
+- Swagger/OpenAPI documentation
+- Streamlit dashboard
+- Docker support
+- Pytest test suite
+- GitHub Actions CI
 
-Category-level strengths and weaknesses
+---
 
-A practical evaluation platform therefore needs a repeatable benchmark pipeline that records these dimensions and makes model-to-model comparisons measurable.
+# 🏗️ Architecture
 
-💡 Solution
+```text
+                         ┌──────────────────────────┐
+                         │       Streamlit UI       │
+                         │      Dashboard           │
+                         └────────────┬─────────────┘
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │       FastAPI API        │
+                         │ /run /report /regression│
+                         │ /leaderboard /concurrency│
+                         └────────────┬─────────────┘
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │    Benchmark Runner      │
+                         └────────────┬─────────────┘
+                                      │
+                    ┌─────────────────┼─────────────────┐
+                    │                 │                 │
+                    ▼                 ▼                 ▼
+             ┌────────────┐    ┌────────────┐    ┌────────────┐
+             │   Ollama   │    │ Cloud APIs │    │  Providers │
+             │   Models   │    │            │    │   Factory  │
+             └─────┬──────┘    └─────┬──────┘    └────────────┘
+                   │                  │
+                   └────────┬─────────┘
+                            ▼
+                  ┌─────────────────────┐
+                  │ Evaluation Pipeline │
+                  ├─────────────────────┤
+                  │ Exact Match         │
+                  │ Fuzzy Match         │
+                  │ Keyword Match       │
+                  │ Semantic Evaluation │
+                  │ LLM-as-a-Judge      │
+                  └──────────┬──────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │ Metrics & Analysis Layer │
+                ├──────────────────────────┤
+                │ Quality                  │
+                │ Latency                  │
+                │ Throughput               │
+                │ Cost                     │
+                │ Reliability              │
+                │ Statistics               │
+                │ Regression Detection     │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │ Experiment Storage   │
+                  └──────────┬───────────┘
+                             │
+                ┌────────────┼────────────┐
+                ▼            ▼            ▼
+          ┌──────────┐ ┌───────────┐ ┌────────────┐
+          │ Reports  │ │Leaderboard│ │ Dashboard  │
+          └──────────┘ └───────────┘ └────────────┘
+````
 
-This project provides an end-to-end benchmarking workflow:
+---
 
-Dataset
-   ↓
+# 🔄 Workflow
+
+```text
+Benchmark Dataset
+       │
+       ▼
+Dataset Validation
+       │
+       ▼
+Experiment Configuration
+       │
+       ▼
 Benchmark Runner
-   ↓
-LLM Provider Layer
-   ↓
+       │
+       ▼
+LLM Provider
+       │
+       ▼
 Model Response
-   ↓
-Evaluation Engine
-   ├── Exact Match
-   ├── Fuzzy Match
-   ├── Semantic Similarity
-   └── LLM-as-a-Judge
-   ↓
-Metrics Engine
-   ├── Quality
-   ├── Latency
-   ├── Throughput
-   ├── Reliability
-   └── Cost
-   ↓
+       │
+       ▼
+Evaluation Pipeline
+       │
+       ├── Exact Match
+       ├── Fuzzy Match
+       ├── Keyword Match
+       ├── Semantic Evaluation
+       └── LLM-as-a-Judge
+       │
+       ▼
+Metrics Calculation
+       │
+       ├── Quality
+       ├── Latency
+       ├── Throughput
+       ├── Cost
+       └── Reliability
+       │
+       ▼
 Experiment Storage
-   ↓
-Analysis
-   ├── Comparison
-   ├── Statistics
-   ├── Failure Analysis
-   ├── Regression Detection
-   └── Quality × Latency × Cost
-   ↓
-Reports + Leaderboard + Dashboard
-
-🚀 Features
-
-1. Multi-Provider LLM Architecture
-
-Provider adapters allow the benchmark engine to work with local and cloud-backed models.
-
-Current provider/model integrations include:
-
-Ollama
-
-Google Gemini
-
-Groq
-
-OpenAI adapter
-
-Anthropic adapter
-
-DeepSeek adapter
-
-Mistral adapter
-
-Kimi adapter
-
-xAI/Grok adapter
-
-Cohere adapter
-
-The project also supports local Ollama models such as:
-
-qwen2.5:3b
-
-qwen2.5-coder:3b
-
-llama3.2:latest
-
-mistral:latest
-
-and cloud/provider-backed configurations such as:
-
-gemini-3.6-flash
-
-openai/gpt-oss-20b
-
-Provider availability and pricing depend on the configured API keys and provider plans.
-
-2. 50-Question Benchmark Dataset
-
-The benchmark dataset contains 50 questions distributed across five categories:
-
-Category
-
-Questions
-
-Math
-
-10
-
-Knowledge
-
-10
-
-Reasoning
-
-10
-
-Coding
-
-10
-
-General
-
-10
-
-Total
-
-50
-
-Dataset versioning is maintained through:
-
-datasets/metadata.json
-datasets/benchmark.json
-
-The original benchmark dataset is preserved while an enhanced version is maintained separately.
-
-3. Evaluation Metrics
-
-Quality
-
-Accuracy
-
-Exact Match
-
-Fuzzy Match
-
-Average Fuzzy Similarity
-
-Semantic Match
-
-Average Semantic Similarity
-
-LLM-as-a-Judge correctness
-
-LLM-as-a-Judge relevance
-
-LLM-as-a-Judge reasoning quality
-
-LLM-as-a-Judge confidence
-
-Performance
-
-Average latency
-
-P50 latency
-
-P95 latency
-
-Provider latency
-
-Tokens per second
-
-Input tokens
-
-Output tokens
-
-Total tokens
-
-Reliability
-
-Error rate
-
-Retry rate
-
-Fallback rate
-
-Fallback success rate
-
-Average attempts
-
-Total retries
-
-Total attempts
-
-Cost
-
-Input cost
-
-Output cost
-
-Total cost
-
-Cost per question
-
-🏗️ Architecture
-
-flowchart TD
-    UI[Streamlit Dashboard]
-    API[FastAPI Backend]
-
-    API --> RUN[Benchmark Runner]
-    API --> REPORT[Experiment Reports]
-    API --> REG[Regression Detection]
-    API --> CONC[Concurrency Benchmark]
-    API --> LB[Model Leaderboard]
-
-    RUN --> REGISTRY[Model Registry]
-    REGISTRY --> PROVIDERS[LLM Provider Layer]
-
-    PROVIDERS --> OLLAMA[Ollama]
-    PROVIDERS --> CLOUD[Cloud Providers]
-
-    RUN --> EVAL[Evaluation Engine]
-    EVAL --> EXACT[Exact Match]
-    EVAL --> FUZZY[Fuzzy Match]
-    EVAL --> SEMANTIC[Semantic Evaluation]
-    EVAL --> JUDGE[LLM-as-a-Judge]
-
-    RUN --> METRICS[Metrics Engine]
-    METRICS --> QUALITY[Quality]
-    METRICS --> PERFORMANCE[Latency / Throughput]
-    METRICS --> RELIABILITY[Reliability]
-    METRICS --> COST[Cost]
-
-    METRICS --> STORAGE[Experiment Storage]
-
-    STORAGE --> ANALYSIS[Analysis Layer]
-    ANALYSIS --> FAILURE[Failure Analysis]
-    ANALYSIS --> STATS[Statistical Runs]
-    ANALYSIS --> REGRESSION[Regression Detection]
-    ANALYSIS --> QLC[Quality × Latency × Cost]
-
-    STORAGE --> EXPORT[JSON / CSV / HTML Reports]
-
-🔄 Workflow
-
-1. Select model
-       ↓
-2. Load benchmark dataset
-       ↓
-3. Validate dataset
-       ↓
-4. Execute benchmark questions
-       ↓
-5. Capture response + latency + token metrics
-       ↓
-6. Evaluate responses
-       ↓
-7. Calculate aggregate metrics
-       ↓
-8. Persist experiment
-       ↓
-9. Analyze experiment
-       ↓
-10. Generate report
-       ↓
-11. Compare models
-       ↓
-12. Detect regressions
-       ↓
-13. Display results in Streamlit
-
-🛠️ Tech Stack
-
-Area
-
-Technology
-
-Language
-
-Python
-
-API
-
-FastAPI
-
-Dashboard
-
-Streamlit
-
-Validation
-
-Pydantic
-
-Testing
-
-Pytest
-
-LLM Orchestration
-
-Provider abstraction
-
-Local LLM Runtime
-
-Ollama
-
-Semantic Evaluation
-
-Embedding-based evaluation
-
-Data
-
-JSON
-
-Containerization
-
-Docker / Docker Compose
-
-CI
-
-GitHub Actions
-
-Version Control
-
-Git / GitHub
-
-📂 Project Structure
-
+       │
+       ├── Regression Detection
+       ├── Statistical Analysis
+       ├── Reports
+       ├── Leaderboard
+       └── Dashboard
+```
+
+---
+
+# 🛠️ Tech Stack
+
+| Layer             | Technology                   |
+| ----------------- | ---------------------------- |
+| Language          | Python                       |
+| API               | FastAPI                      |
+| UI                | Streamlit                    |
+| LLM Framework     | Custom Provider Architecture |
+| Local LLM         | Ollama                       |
+| Cloud Providers   | Provider adapters            |
+| Validation        | Pydantic                     |
+| Testing           | Pytest                       |
+| Data Processing   | JSON / Python                |
+| Embeddings        | Ollama embedding models      |
+| Containerization  | Docker                       |
+| CI/CD             | GitHub Actions               |
+| API Documentation | Swagger / OpenAPI            |
+| Version Control   | Git / GitHub                 |
+
+---
+
+# 📂 Project Structure
+
+```text
 llm/
+│
 ├── backend/
 │   ├── api/
 │   │   └── benchmark.py
+│   │
 │   ├── benchmark/
 │   │   ├── runner.py
 │   │   ├── evaluator.py
@@ -412,24 +344,29 @@ llm/
 │   │   ├── statistics.py
 │   │   ├── retry_handler.py
 │   │   ├── embedding_cache.py
-│   │   ├── quality_cost_latency.py
+│   │   ├── dataset_enhancer.py
 │   │   ├── regression_detector.py
 │   │   ├── regression_service.py
 │   │   ├── evaluation_harness.py
 │   │   ├── experiment_report.py
 │   │   ├── concurrency_runner.py
 │   │   ├── report_exporter.py
-│   │   └── leaderboard.py
+│   │   ├── leaderboard.py
+│   │   └── quality_cost_latency.py
+│   │
 │   ├── llm/
 │   │   ├── base.py
+│   │   ├── ollama_provider.py
 │   │   ├── model_registry.py
 │   │   ├── provider_factory.py
-│   │   ├── ollama_provider.py
-│   │   └── provider adapters...
+│   │   └── provider adapters
+│   │
 │   ├── schemas/
 │   │   └── benchmark.py
+│   │
 │   ├── observability/
 │   │   └── logger.py
+│   │
 │   ├── main.py
 │   └── run_benchmark.py
 │
@@ -445,7 +382,7 @@ llm/
 │   ├── test_benchmark.py
 │   ├── test_evaluator.py
 │   ├── test_metrics.py
-│   ├── test_retry_handler.py
+│   ├── test_storage.py
 │   ├── test_regression_detector.py
 │   ├── test_evaluation_harness.py
 │   ├── test_experiment_report.py
@@ -453,6 +390,9 @@ llm/
 │   ├── test_report_exporter.py
 │   ├── test_leaderboard.py
 │   └── ...
+│
+├── docs/
+│   └── screenshots/
 │
 ├── .github/
 │   └── workflows/
@@ -464,532 +404,687 @@ llm/
 ├── pytest.ini
 ├── .gitignore
 └── README.md
+```
 
-📋 Prerequisites
+---
 
-Recommended environment:
+# 📋 Prerequisites
 
-Python 3.12+
+Before running the project, install:
 
-Git
+* Python 3.12+
+* Git
+* Docker Desktop
+* Ollama
+* Required Ollama models
 
-Docker Desktop (optional but recommended)
+Example local model:
 
-Ollama for local models
+```bash
+ollama pull qwen2.5:3b
+```
 
-At least 8 GB RAM recommended for local LLM experimentation
+Check installed models:
 
-API keys only when using cloud providers
+```bash
+ollama list
+```
 
-⚙️ Installation
+---
 
-1. Clone the repository
+# ⚙️ Installation
 
+Clone the repository:
+
+```bash
 git clone https://github.com/vummidiganesh55/llm-benchmark.git
 cd llm-benchmark
+```
 
-2. Create a virtual environment
+Create a virtual environment:
 
-Windows
-
+```bash
 python -m venv .venv
-.venv\Scripts\activate
+```
 
-Linux / macOS
+Activate it on Windows:
 
-python -m venv .venv
-source .venv/bin/activate
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
-3. Install dependencies
+Install dependencies:
 
-python -m pip install --upgrade pip
+```bash
 pip install -r requirements.txt
+```
 
-🔑 Environment Variables
+---
 
-Create a .env file in the project root.
+# 🔑 Environment Variables
+
+Create a `.env` file in the project root if you want to use cloud providers.
 
 Example:
 
-# Local Ollama
-OLLAMA_BASE_URL=http://localhost:11434
+```env
+MISTRAL_API_KEY=your_mistral_api_key
+GOOGLE_API_KEY=your_google_api_key
+OPENAI_API_KEY=your_openai_api_key
+ANTHROPIC_API_KEY=your_anthropic_api_key
+GROQ_API_KEY=your_groq_api_key
+COHERE_API_KEY=your_cohere_api_key
+XAI_API_KEY=your_xai_api_key
+```
 
-# Optional cloud providers
-GOOGLE_API_KEY=
-GROQ_API_KEY=
-OPENAI_API_KEY=
-ANTHROPIC_API_KEY=
-MISTRAL_API_KEY=
-DEEPSEEK_API_KEY=
-XAI_API_KEY=
-COHERE_API_KEY=
+For local Ollama benchmarking, an API key is not required.
 
-Never commit .env or API keys.
+### Security
 
-The repository .gitignore excludes environment secrets and runtime-generated files.
+Never commit:
 
-▶️ Usage
+```text
+.env
+API keys
+access tokens
+private credentials
+```
 
-Start the FastAPI backend
+The repository `.gitignore` excludes environment files and generated runtime outputs.
 
+---
+
+# ▶️ Usage
+
+## Start FastAPI Backend
+
+```bash
 uvicorn backend.main:app --reload
+```
 
-Open:
+Open Swagger:
 
+```text
 http://127.0.0.1:8000/docs
+```
 
 Available benchmark endpoints include:
 
+```text
 GET  /benchmark/models
 POST /benchmark/run
 POST /benchmark/regression
 GET  /benchmark/report
 POST /benchmark/concurrency
 GET  /benchmark/leaderboard
+```
 
-Start the Streamlit dashboard
+---
 
+## Start Streamlit Dashboard
+
+```bash
 streamlit run frontend/streamlit_app.py
+```
 
 Open:
 
+```text
 http://localhost:8501
+```
 
-Run the final 50-question benchmark
+---
 
+## Run the Final 50-Question Benchmark
+
+```bash
 python -m backend.run_benchmark
+```
 
-The final benchmark runner validates the dataset, executes all 50 questions, calculates metrics, and writes the final JSON artifact under results/.
+The runner validates the benchmark dataset, executes all 50 questions, calculates metrics, prints individual results, and stores the final JSON result under:
 
-💡 Example
+```text
+results/final_50q_qwen2.5_3b.json
+```
 
-Example benchmark request:
+---
 
+# 💡 Example
+
+Example benchmark configuration:
+
+```json
 {
   "model": "qwen2.5:3b",
-  "limit": 5
+  "limit": 50
 }
+```
 
-Example leaderboard request:
+Example metrics produced by the platform:
 
-GET /benchmark/leaderboard?sort_by=accuracy&descending=true&latest_only=true
-
-Example regression request:
-
+```json
 {
-  "baseline_experiment_id": "20261002_172627_064433",
-  "current_experiment_id": "20261002_172534_051571"
+  "total": 50,
+  "successful": 50,
+  "failed": 0,
+  "accuracy": 0.86,
+  "average_latency": 1.303,
+  "p50_latency": 0.7354,
+  "p95_latency": 4.1467,
+  "tokens_per_second": 68.4269
 }
+```
 
-The recorded regression experiment detected:
+The exact benchmark result depends on the model, hardware, runtime state, dataset version, and experiment configuration.
 
-Average latency regression
+---
 
-Tokens-per-second regression
+# 🧪 Testing
 
-while accuracy and error rate did not regress. The stored regression artifact reports two regressed metrics.
+The project uses **Pytest** for automated testing.
 
-🧪 Testing
+Run:
 
-Run the complete test suite:
-
+```bash
 pytest -q
+```
 
 Current local verification:
 
+```text
 243 passed, 1 warning
+```
 
-The warning is from a dependency deprecation notice related to google-genai/typing internals and does not currently cause test failure.
+The warning is a dependency deprecation warning related to a Google Generative AI dependency and Python 3.17 compatibility.
 
-⚙️ GitHub Actions CI
+The test suite covers:
 
-The project includes:
+* Benchmark runner
+* Evaluators
+* Metrics
+* Storage
+* Dataset versioning
+* Retry handling
+* Cost calculation
+* Embedding cache
+* Comparison engine
+* Statistical analysis
+* Failure analysis
+* LLM-as-a-Judge
+* Model registry
+* Regression detection
+* Regression service
+* Evaluation harness
+* Experiment reports
+* Concurrency runner
+* Report exporter
+* Model leaderboard
 
-.github/workflows/tests.yml
+---
 
-The CI pipeline:
+# 📊 Evaluation
 
-Push / Pull Request
-        ↓
-Checkout repository
-        ↓
-Set up Python 3.12
-        ↓
-Install requirements
-        ↓
-Run pytest
+The platform evaluates LLMs using multiple dimensions.
 
-Workflow:
+## Quality Metrics
 
-name: LLM Benchmark CI
+* Accuracy
+* Exact Match
+* Fuzzy Match
+* Keyword Match
+* Average Fuzzy Similarity
+* Semantic Match
+* Average Semantic Similarity
+* LLM-as-a-Judge scores
 
-on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+## Performance Metrics
 
-jobs:
-  tests:
-    runs-on: ubuntu-latest
+* Average Latency
+* P50 Latency
+* P95 Latency
+* Provider Latency
+* Tokens per Second
+* Throughput
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+## Reliability Metrics
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: "pip"
+* Error Rate
+* Retry Rate
+* Fallback Rate
+* Fallback Success Rate
+* Average Attempts
+* Average Retries
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+## Cost Metrics
 
-      - name: Run pytest
-        run: pytest -q
+* Input Cost
+* Output Cost
+* Total Cost
+* Cost per Question
 
-CI verification status
+## Advanced Analysis
 
-The local test suite currently passes with:
+* Statistical benchmark analysis
+* Quality × Latency × Cost
+* Regression detection
+* Failure analysis
+* Experiment comparison
+* Concurrency analysis
 
-243 passed, 1 warning
+---
 
-The GitHub Actions workflow is configured to execute the same pytest suite on pushes and pull requests. A successful remote GitHub Actions run should be verified from the repository's Actions tab after the latest push rather than claimed from the local test result.
+# 🏆 Model Leaderboard
 
-📊 Evaluation
+The platform provides a model leaderboard based on stored experiments.
 
-The platform evaluates LLMs across multiple dimensions rather than using a single score.
+Supported leaderboard metrics include:
 
+```text
+accuracy
+average_latency
+p95_latency
+tokens_per_second
+total_cost_usd
+error_rate
+```
+
+The leaderboard exposes measurable results rather than assigning an overall winner.
+
+The current stored leaderboard contains experiments across six model entries:
+
+* Gemini 3.6 Flash
+* Llama 3.2
+* Mistral
+* GPT-OSS 20B
+* Qwen2.5-Coder 3B
+* Qwen2.5 3B
+
+The leaderboard artifact records **30 experiments across 6 models**. 
+
+---
+
+# 📈 Regression Detection
+
+The platform compares a baseline experiment against a current experiment.
+
+Example regression analysis:
+
+```text
+Baseline:
+qwen2.5:3b
+Experiment: 20261002_172627_064433
+
+Current:
+qwen2.5:3b
+Experiment: 20261002_172534_051571
+```
+
+The recorded comparison detected changes in:
+
+```text
+Average Latency
+Tokens Per Second
+```
+
+while accuracy and error rate did not trigger regression thresholds.   
+
+This provides a foundation for detecting performance regressions between experiments.
+
+---
+
+# 🔬 Experiment Reports
+
+The platform generates structured experiment reports containing:
+
+```text
+Experiment
+Summary
 Quality
-
-Accuracy
-Exact Match
-Fuzzy Match
-Semantic Similarity
-LLM-as-a-Judge
-
-Performance
-
-Average Latency
-P50 Latency
-P95 Latency
-Tokens / Second
-
 Reliability
-
-Error Rate
-Retry Rate
-Fallback Rate
-Fallback Success Rate
-
+Performance
 Cost
+Category Performance
+```
 
-Input Cost
-Output Cost
-Total Cost
-Cost / Question
+Reports can be exported as:
 
-Analysis
+```text
+JSON
+CSV
+HTML
+```
 
-Model Comparison
-Failure Analysis
-Statistical Runs
-Regression Detection
-Quality × Latency × Cost
-Experiment Reports
-Concurrency Benchmarking
-Leaderboard
+---
 
-📸 Screenshots / Demo
+# ⚡ Performance
 
-Important for GitHub: the screenshot assets should be committed to a repository path such as docs/screenshots/. The local outputs/ directory is intentionally ignored by .gitignore, so README image links should point to committed copies rather than the ignored outputs/ directory.
+A captured 50-question benchmark run recorded:
 
-Recommended repository layout:
+```text
+Total Questions      : 50
+Successful Questions : 50
+Failed Questions     : 0
+Accuracy             : 86%
+Average Latency      : 1.303 seconds
+P50 Latency          : 0.7354 seconds
+P95 Latency          : 4.1467 seconds
+Tokens / Second      : 68.4269
+```
 
-docs/
-└── screenshots/
-    ├── backend_ui.png
-    ├── final_50Q_benchmark.png
-    ├── streamlit_dashboard.png
-    └── tests.png
+These measurements are experiment-specific and should not be interpreted as universal model performance.
 
-FastAPI / Swagger API
+The platform is designed to preserve experiment-level measurements so different models and runs can be analyzed under the same evaluation framework.
 
+---
 
+# 📸 Screenshots / Demo
 
-The FastAPI Swagger UI exposes benchmark execution, regression detection, experiment reports, concurrency benchmarking, and model leaderboard endpoints.
+## FastAPI Swagger API
 
-Final 50Q Benchmark
+![FastAPI Swagger API](docs/screenshots/backend_ui.png)
 
+The Swagger interface exposes the benchmark API endpoints for:
 
+* Model discovery
+* Benchmark execution
+* Regression detection
+* Experiment reports
+* Concurrency benchmarking
+* Model leaderboard
 
-Latest captured final 50-question run shown in the project artifacts:
+---
 
-Metric
+## Final 50Q Benchmark
 
-Result
+![Final 50Q Benchmark](docs/screenshots/final_50Q_benchmark.png)
 
-Questions
+Example captured benchmark output showing:
 
-50
+* 50 questions
+* Successful execution
+* Accuracy
+* Latency
+* Token throughput
+* Evaluation metrics
 
-Successful
+---
 
-50
+## Streamlit Dashboard
 
-Failed
+![Streamlit Dashboard](docs/screenshots/streamlit_dashboard.png)
 
-0
+The dashboard provides multiple analytical views:
 
-Accuracy
+* Overview
+* Model Comparison
+* Quality
+* Categories
+* Performance
+* Cost
+* Reliability
+* Failures
+* Statistics
+* Experiments
+* Question Explorer
 
-86.00%
+---
 
-Average Latency
+## Automated Tests
 
-1.303 s
-
-P50 Latency
-
-0.7354 s
-
-P95 Latency
-
-4.1467 s
-
-Tokens / Second
-
-68.4269
-
-Total Tokens
-
-4,458
-
-The screenshot also shows exact match at 86%, fuzzy match at 88%, and average fuzzy similarity of 0.9168. Semantic evaluation and LLM-as-a-Judge were disabled for this captured final run.
-
-Streamlit Dashboard
-
-
-
-The dashboard screenshot shows:
-
-30 experiments
-
-6 models
-
-659 questions
-
-83.70% average accuracy
-
-5.98 s average latency
-
-Dataset version 1.0.0
-
-Five benchmark categories
-
-Experiment history
-
-Tests
-
-
+![Automated Tests](docs/screenshots/tests.png)
 
 Current local test verification:
 
+```text
 243 passed, 1 warning
+```
 
-Regression Detection
+---
 
-The regression artifact demonstrates detection of measurable changes between two experiments:
+# 🔄 GitHub Actions CI
 
-Average latency       → regression detected
-Tokens / second       → regression detected
-Accuracy              → no regression
-Error rate            → no regression
+The project includes a GitHub Actions workflow:
 
-Model Leaderboard
+```text
+.github/workflows/tests.yml
+```
 
-The captured leaderboard contains six models:
+The CI pipeline:
 
-gemini-3.6-flash
-llama3.2:latest
-mistral:latest
-openai/gpt-oss-20b
-qwen2.5-coder:3b
-qwen2.5:3b
+```text
+Git Push / Pull Request
+        │
+        ▼
+Checkout Repository
+        │
+        ▼
+Setup Python 3.12
+        │
+        ▼
+Install Dependencies
+        │
+        ▼
+Run Pytest
+        │
+        ▼
+Test Result
+```
 
-The leaderboard supports sorting by:
+The workflow automatically runs the test suite for pushes and pull requests targeting the main branches.
 
-Accuracy
+Local verification before the latest repository update:
 
-Average latency
+```text
+243 passed, 1 warning
+```
 
-P95 latency
+---
 
-Tokens per second
+# 🐳 Docker
 
-Total cost
+The project includes Docker support.
 
-Error rate
+Build:
 
-⚡ Performance
+```bash
+docker compose build
+```
 
-The platform records both model quality and runtime performance.
+Start:
 
-Example captured benchmark metrics:
+```bash
+docker compose up
+```
 
-Accuracy
-Average Latency
-P50 Latency
-P95 Latency
-Tokens / Second
-Input Tokens
-Output Tokens
-Total Tokens
+The architecture supports running:
 
-A captured Qwen 2.5 3B experiment recorded:
+* FastAPI backend
+* Streamlit frontend
+* Ollama on the host/local environment
 
-Accuracy          : 100%
-Average Latency   : 0.5589 s
-P95 Latency       : 0.5752 s
-Tokens / Second   : 95.7288
-Error Rate        : 0%
+Docker provides a reproducible application environment while keeping local model execution separate.
 
-These values belong to a 2-question experiment, not the final 50-question benchmark.
+---
 
-🔐 Security
+# 🔐 Security
 
-Security considerations:
+Security considerations implemented in the project include:
 
-API keys are stored in environment variables.
+* API keys stored through environment variables
+* `.env` excluded from Git
+* Generated runtime outputs excluded from Git
+* No credentials hard-coded into the benchmark configuration
+* Provider-specific API adapters
+* Validation of benchmark request schemas
+* Controlled benchmark execution
+* Error handling around provider failures
 
-.env is excluded from Git.
+### Never commit
 
-Local runtime results are excluded from Git where appropriate.
+```text
+.env
+API keys
+Private credentials
+Access tokens
+Local secrets
+```
 
-Generated screenshot/report outputs are excluded from Git unless intentionally copied into documentation assets.
+---
 
-Provider credentials should never be hard-coded.
+# 🔮 Future Improvements
 
-Benchmark execution should be treated as untrusted workload when arbitrary user prompts/tools are introduced.
+Potential future enhancements include:
 
-🔮 Future Improvements
+* Distributed benchmarking
+* GPU utilization monitoring
+* Memory usage benchmarking
+* Streaming latency measurement
+* More standardized benchmark datasets
+* Human evaluation interface
+* Advanced LLM-as-a-Judge calibration
+* Persistent database-backed experiment storage
+* Authentication and authorization
+* Cloud deployment
+* Kubernetes deployment
+* Distributed worker execution
+* Advanced observability
+* Prometheus metrics
+* Grafana dashboards
+* Scheduled benchmark execution
+* Automated performance regression alerts
 
-Planned or possible extensions:
+---
 
-Distributed benchmark execution
+# ⚠️ Limitations
 
-Persistent experiment database
+Current limitations include:
 
-Advanced vector-store evaluation
+* Benchmark results depend on local hardware and runtime conditions.
+* Local Ollama models have different inference characteristics from cloud APIs.
+* Cloud provider quotas and rate limits can affect experiments.
+* Some provider integrations require API credentials.
+* Cost measurements depend on configured provider pricing.
+* LLM-as-a-Judge requires a configured judge model/provider.
+* Semantic evaluation depends on the configured embedding model.
+* Benchmark datasets are relatively small and should not be treated as comprehensive evaluations of general model capability.
+* A single benchmark run should not be interpreted as universal model performance.
 
-More robust semantic evaluation
+---
 
-Human evaluation interface
-
-Automated model selection
-
-Prompt/version tracking
-
-Dataset expansion
-
-Scheduled benchmark runs
-
-Hardware utilization metrics
-
-GPU/CPU/RAM monitoring
-
-Kubernetes deployment
-
-Distributed worker queues
-
-Advanced cost forecasting
-
-Statistical significance testing
-
-Online regression alerts
-
-⚠️ Limitations
-
-Local model latency depends heavily on hardware and model size.
-
-Cloud provider quotas can affect benchmark completion.
-
-Provider pricing changes over time.
-
-Semantic evaluation quality depends on the embedding/evaluation model.
-
-LLM-as-a-Judge results depend on the selected judge model.
-
-A benchmark score is not a universal measure of production quality.
-
-Historical experiments may have been executed under different runtime/provider conditions.
-
-The captured final 50-question run does not include semantic evaluation or LLM-as-a-Judge scores.
-
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome.
 
-Suggested workflow:
+## Development workflow
 
-git checkout -b feature/your-feature
+```bash
+git clone https://github.com/vummidiganesh55/llm-benchmark.git
 
-Make changes and run:
+cd llm-benchmark
+
+python -m venv .venv
+
+pip install -r requirements.txt
 
 pytest -q
+```
 
-Then:
+For a new feature:
 
-git add .
-git commit -m "Add your feature"
-git push origin feature/your-feature
+```text
+1. Create a feature branch
+2. Implement the change
+3. Add tests
+4. Run the complete test suite
+5. Update documentation
+6. Create a pull request
+```
 
-Open a pull request against main.
+---
 
-📄 License
+# 📄 License
 
-This project can be released under the MIT License.
+This project is licensed under the MIT License.
 
-If you publish this repository under MIT, add a LICENSE file containing the standard MIT license text and your chosen copyright holder/year.
+See the `LICENSE` file for details.
 
-👨‍💻 Author
+---
 
-Vummidi Ganesh
+# 👨‍💻 Author
 
-AI / Machine Learning Engineer | LLM Engineering | Evaluation | Python
+## Vummidi Ganesh
+
+**AI / Machine Learning Engineer**
+
+Interested in:
+
+* Artificial Intelligence
+* Machine Learning
+* Large Language Models
+* NLP
+* RAG
+* AI Agents
+* LLM Evaluation
+* MLOps
+* Generative AI
 
 GitHub:
-https://github.com/vummidiganesh55
 
-Project:
-https://github.com/vummidiganesh55/llm-benchmark
+[https://github.com/vummidiganesh55](https://github.com/vummidiganesh55)
 
-⭐ Project Highlights
+---
 
-✓ Multi-provider LLM benchmarking
-✓ 50-question benchmark dataset
-✓ Exact + fuzzy + semantic evaluation
-✓ LLM-as-a-Judge
-✓ Retry + fallback
-✓ Failure analysis
-✓ Statistical analysis
-✓ Regression detection
-✓ Experiment tracking
-✓ Quality × Latency × Cost
-✓ Concurrency benchmarking
-✓ JSON / CSV / HTML reporting
-✓ Model leaderboard
-✓ FastAPI backend
-✓ Streamlit dashboard
-✓ Docker
-✓ Pytest
-✓ GitHub Actions CI
+# ⭐ Project Highlights
 
-Built as an engineering-focused LLM evaluation platform rather than a single-model demo.
+This project demonstrates practical experience with:
+
+```text
+Python
+        ↓
+LLM Provider Architecture
+        ↓
+Benchmark Engineering
+        ↓
+Evaluation Pipelines
+        ↓
+Quality / Latency / Cost Analysis
+        ↓
+Reliability Engineering
+        ↓
+Regression Detection
+        ↓
+Experiment Tracking
+        ↓
+Report Generation
+        ↓
+Model Leaderboards
+        ↓
+FastAPI
+        ↓
+Streamlit
+        ↓
+Pytest
+        ↓
+Docker
+        ↓
+GitHub Actions
+```
+
+The project is designed as an **engineering-focused LLM evaluation platform**, emphasizing measurable experiments, reproducibility, automated testing, and production-oriented evaluation workflows.
+
+````
+
+### One important thing before you paste it
+
+For the screenshots to render on GitHub, the repository needs these files:
+
+```text
+docs/screenshots/backend_ui.png
+docs/screenshots/final_50Q_benchmark.png
+docs/screenshots/streamlit_dashboard.png
+docs/screenshots/tests.png
+````
+
+Your `outputs/` folder can remain ignored.
+
+Also, I intentionally used your **captured 86% / 50-question run** in the Performance section rather than silently substituting another benchmark result. The experiment/leaderboard artifacts contain some historical records with inconsistent question-count fields, so the README avoids presenting those records as a clean 50-question comparison. 
